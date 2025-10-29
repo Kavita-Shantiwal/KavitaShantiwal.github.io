@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kavita Shantiwal — Data Scientist</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent1:#007b8a; --accent2:#00c4b4;
+    --bg:#f6fbfc; --card:#ffffff; --muted:#6b7280;
+    --nav-grad: linear-gradient(90deg,#022f40,#034d57);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;margin:0;background:var(--bg);color:#111;}
+  /* NAVBAR */
+  .nav{
+    position:sticky;top:0;z-index:1200;
+    background:var(--nav-grad); color:#fff;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 36px;gap:20px;box-shadow:0 6px 18px rgba(3,77,87,0.12);
+  }
+  .brand{display:flex;flex-direction:column;line-height:1;}
+  .brand h1{font-size:20px;margin:0;color:#e6fbff}
+  .brand p{font-size:12px;margin:0;color:rgba(230,251,255,0.85)}
+  .nav-links{display:flex;gap:18px;align-items:center}
+  .nav-links a{color:#f0fbff;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px;transition:all .18s}
+  .nav-links a:hover{background:rgba(255,255,255,0.06);transform:translateY(-2px); color:var(--accent2)}
+  .resume-btn{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+  .resume-btn:hover{background:#fff;color:var(--accent1);}
+
+  /* HERO */
+  .hero{padding:60px 6%;text-align:center;background:linear-gradient(180deg, rgba(0,120,138,0.06), transparent 60%);}
+  .hero h2{font-size:34px;margin:10px 0;color:#022f40}
+  .hero p{max-width:860px;margin:12px auto;color:var(--muted);font-size:16px}
+
+  /* SECTIONS */
+  section{padding:48px 6%;}
+  h2.section-title{color:var(--accent1);margin-bottom:20px;font-size:24px}
+
+  /* Skills grid */
+  .skills-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .skill-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,32,0.06);text-align:center;transition:transform .22s}
+  .skill-card:hover{transform:translateY(-6px)}
+  .skill-icon{width:54px;height:54px;margin-bottom:12px;display:inline-block}
+  .skill-card h3{margin:6px 0 8px;font-size:16px;color:#0b3b3f}
+  .skill-card p{color:var(--muted);font-size:14px;line-height:1.5}
+
+  /* Projects */
+  .projects-grid{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(8,24,32,0.06);transition:all .22s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(8,24,32,0.12)}
+  .card img{width:100%;height:210px;object-fit:cover;display:block}
+  .card-body{padding:16px}
+  .card-body h3{margin:6px 0 8px;color:#0b3b3f;font-size:18px}
+  .card-body p{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .card-body .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;text-decoration:none;font-weight:700}
+  .card-body .btn:hover{opacity:.95}
+
+  /* Experience */
+  .experience-grid{display:grid;gap:18px;grid-template-columns:1fr}
+  .job{background:#fff;border-radius:10px;padding:14px 18px;border-left:4px solid var(--accent2);box-shadow:0 8px 22px rgba(8,24,32,0.04)}
+  .job h4{margin:0;color:#07373a;font-size:16px}
+  .job .meta{color:var(--muted);font-size:13px;margin:6px 0}
+  .job ul{margin:8px 0 0 18px;color:#2b2b2b}
+  .job ul li{margin-bottom:8px;font-size:14px}
+
+  /* Education card */
+  .edu-card{max-width:820px;margin:0 auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 22px rgba(8,24,32,0.04);text-align:left}
+
+  /* Footer */
+  footer{background:linear-gradient(90deg,#022f40,#034d57);color:#fff;padding:30px 6%;text-align:center;margin-top:24px}
+  footer a{color:#c8fff7;text-decoration:underline}
+
+  @media(max-width:720px){
+    .nav{padding:14px}
+    .hero h2{font-size:22px}
+    section{padding:28px 6%}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="brand">
+    <h1>Kavita Shantiwal</h1>
+    <p>Data Scientist — Python · ML · Deployment</p>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:18px;">
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a class="resume-btn" href="resume.pdf" download>Download Resume</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Hi — I'm <strong>Kavita</strong>, a Data Scientist</h2>
+  <p>I build machine learning models and deploy data products that help organizations make smarter decisions. Skilled in Python, SQL, Power BI, and modern ML frameworks — learning Docker, Kubernetes & AWS for scalable deployments.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About</h2>
+  <p>I transform raw datasets into predictive models and dashboards. My projects include sales forecasting (Walmart), housing price modeling, and medical diagnosis models. I deploy models with Flask/Django and create dashboards with Power BI and Plotly to make results actionable.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <h3>Python & Data</h3>
+      <p>Pandas, NumPy, SQL, MySQL, data cleaning & ETL.</p>
+    </div>
+
+    <div class="skill-card">
+      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+      <h3>Machine Learning</h3>
+      <p>Scikit-learn, XGBoost, Random Forest, KNN, model evaluation & tuning.</p>
+    </div>
+
+    <div class="skill-card">
+      <img class="skill-icon" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Power BI">
+      <h3>Visualization</h3>
+      <p>Power BI, Matplotlib, Seaborn, Plotly — dashboards & storytelling.</p>
+    </div>
+
+    <div class="skill-card">
+      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+      <h3>Deployment & Web</h3>
+      <p>Django, Flask, API design — model serving & simple web UIs.</p>
+    </div>
+
+    <div class="skill-card">
+      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+      <h3>Cloud & DevOps</h3>
+      <p>Docker, Kubernetes (learning), AWS (S3, EC2), CI/CD basics.</p>
+    </div>
+
+    <div class="skill-card">
+      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
+      <h3>Analytics</h3>
+      <p>Feature engineering, statistical testing, forecasting, time series.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80" alt="Walmart Prediction">
+      <div class="card-body">
+        <h3>Walmart Sales Forecasting</h3>
+        <p>Random Forest forecasting with automated preprocessing and feature engineering.</p>
+        <a class="btn" href="https://github.com/Kavita-Shantiwal/data_science_work/blob/main/4N-New_walmart_pred.ipynb" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80" alt="Dragon Real Estate">
+      <div class="card-body">
+        <h3>Dragon Real Estate Price Prediction</h3>
+        <p>RandomForestRegressor pipeline, RMSE tuning, and Flask API for live predictions.</p>
+        <a class="btn" href="https://github.com/Kavita-Shantiwal/data_science_work/blob/main/Dragon.ipynb" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=1200&q=80" alt="COVID Prediction">
+      <div class="card-body">
+        <h3>COVID-19 Diagnosis Model</h3>
+        <p>Classification study using Logistic Regression, KNN, XGBoost, and a Django dashboard for interaction.</p>
+        <a class="btn" href="https://github.com/Kavita-Shantiwal/data_science_work/blob/main/Covid_prediction.ipynb" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="experience-grid">
+    <div class="job">
+      <h4>Zucol, Jaipur — Data Analyst</h4>
+      <div class="meta">Mar 2023 – Jun 2024</div>
+      <ul>
+        <li>Conducted EDA using Pandas & Matplotlib to extract business insights.</li>
+        <li>Built automated ETL scripts to pull and clean data from MySQL.</li>
+        <li>Designed predictive models in Scikit-learn for operational improvements.</li>
+        <li>Delivered Power BI dashboards to enhance decision-making.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h4>Samyak IT Solutions Pvt Ltd — Data Science Intern</h4>
+      <div class="meta">Apr 2022 – Aug 2022</div>
+      <ul>
+        <li>Cleaned and prepared data for machine learning workflows.</li>
+        <li>Created visual reports and dashboards using Power BI and Seaborn.</li>
+        <li>Supported model validation and statistical analysis reporting.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="edu-card">
+    <p><strong>🎓 B.Sc. in Mathematics</strong> — Kanoria PG College, Jaipur</p>
+    <p><strong>📜 Certification:</strong> Data Science & Machine Learning — Samyak Infotech</p>
+    <p><strong>Currently learning:</strong> Docker, Kubernetes, AWS for scalable ML deployments.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer id="contact">
+  <h2 class="section-title" style="color:#fff">Contact</h2>
+  <p style="color:#d6fbf6">Let’s collaborate — I help businesses build predictive systems and dashboards.</p>
+  <div style="color:#e6fff9">
+    <p>📧 <a href="mailto:kavita.shantiwal66@gmail.com">kavita.shantiwal66@gmail.com</a></p>
+    <p>📞 +91 8278669336</p>
+    <p>🌐 <a href="https://github.com/Kavita-Shantiwal" target="_blank">GitHub</a> • <a href="https://www.linkedin.com/in/kavita-shantiwal/" target="_blank">LinkedIn</a></p>
+  </div>
+  <p style="margin-top:18px;color:#c8fff7">© 2025 Kavita Shantiwal</p>
+</footer>
+
+</body>
+</html>
